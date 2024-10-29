@@ -5,12 +5,7 @@
 # Full Name: John Doe 
 # First Name: John 
 # Last Name: Doe 
-# 2. Once you have the code working for one name, test your script with at least three times 
-# with different names. The full output (full name, first name, last name) should be 
-# printed for each name. Examples: 
-# parse_and_display(‘John Doe’) 
-# parse_and_display(‘Grace Flores’) 
-# parse_and_display(‘JB Oinonen’)
+
 
 # name = 'Mochi Reyes'
 # full_name = name.split(' ')
