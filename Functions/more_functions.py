@@ -28,12 +28,12 @@ def display_mailing_label(name, address, city, state, zip):
 
 
 def add_numbers(*args):
-    #adds all arguments
+    #sums all arguments
     total = sum(args)
 
     # empty string to collect all numbers
     numbers = ''
-    for i, arg in enumerate(args):
+    for i, arg in enumerate(args): # will make tuples containing position and the argument as items in each tuple
         numbers += str(arg)
         if i < len(args) - 1:  # adds + in betweeen every number
             numbers += ' + ' 
