@@ -37,12 +37,12 @@ def name_game(name):
         yield f'Banana-fanna fo-f{trunced_name}'
         yield f'Fee fi mo-m{trunced_name}'
         yield f'{name}!\n'
-    elif name[1] == 'f':
+    elif name[0] == 'f':
         yield f'{name}, {name}, bo-{trunced_name}'
         yield f'Banana-fanna fo-{trunced_name}'
         yield f'Fee fi mo-m{trunced_name}'
         yield f'{name}!\n'
-    elif name[2] == 'm':
+    elif name[0] == 'm':
          yield f'{name}, {name}, bo-b{trunced_name}'
          yield f'Banana-fanna fo-f{trunced_name}'
          yield f'Fee fi mo-{trunced_name}'
