@@ -23,11 +23,11 @@
 
 class Restaurant:
     '''Variety of restaurants'''
-    def __init__(self, rest_name, food_type,number_served = 0, customer_ratings = []):
+    def __init__(self, rest_name, food_type,number_served = 0):
         self.rest_name = rest_name
-        self.food_type = food_type
+        self.food_type = food_type 
         self.number_served = number_served
-        self.customer_ratings = customer_ratings
+        self.customer_ratings = []
 
     def describe_rest(self):
         print(f'{self.rest_name} serves {self.food_type}')
@@ -40,10 +40,18 @@ class Restaurant:
         self.number_served += num_served
 
     def print_num_served(self):
-        print(f'{self.rest_mame} has served {self.number_served} customers!')
+        print(f'{self.rest_name} has served {self.number_served} customers!')
 
     def customer_rating(self):
-        rating = int(input('How would you rate your experience today on a scale of 1-5 (5 being excellent)?: '))
+        options = [1, 2, 3, 4, 5]
+        rating = 0
+        while rating not in options:
+            try:
+                rating = int(input('How would you rate your experience today on a scale of 1-5 (5 being excellent)?: '))
+                if rating not in options:
+                     print('Please enter an integer between 1 and 5')
+            except ValueError:
+                print('Invalid choice. Please try again. (1-5): ') 
         self.customer_ratings.append(rating)
         print(f'Your rating # was {rating}. The average rating for this restaurant is {sum(self.customer_ratings)/len(self.customer_ratings)}')
     
@@ -52,13 +60,13 @@ rest1 = Restaurant("McDonald's", 'Burgers')
 rest2 = Restaurant('El Meson', 'Tacos')
 rest3 = Restaurant('Taco Bell', "'Tacos'")
 
-rest1.describe_rest()
-rest2.describe_rest()
-rest3.describe_rest()
+# rest1.describe_rest()
+# rest2.describe_rest()
+# rest3.describe_rest()
 
-rest1.rest_open()
-rest2.rest_open()
-rest3.rest_open()
+# rest1.rest_open()
+# rest2.rest_open()
+# rest3.rest_open()
 
 # 6. Test your new methods: 
 # ∗ For each of your example restaurants, run print_num_served() to check the initial 
@@ -70,3 +78,34 @@ rest3.rest_open()
 # ∗ For customer_rating(), try inputting a few “incorrect” values, like the number 6, a 
 # decimal number such as 2.5, and a word/phrase such as “5 stars!
 
+# rest1.print_num_served()
+# rest2.print_num_served()
+# rest3.print_num_served()
+
+# rest1.add_num_served()
+# rest1.add_num_served()
+# rest1.add_num_served()
+
+# rest2.add_num_served()
+# rest2.add_num_served()
+# rest2.add_num_served()
+
+# rest3.add_num_served()
+# rest3.add_num_served()
+# rest3.add_num_served()
+
+# rest1.print_num_served()
+# rest2.print_num_served()
+# rest3.print_num_served()
+
+rest1.customer_rating()
+rest1.customer_rating()
+rest1.customer_rating()
+
+rest2.customer_rating()
+rest2.customer_rating()
+rest2.customer_rating()
+
+rest3.customer_rating()
+rest3.customer_rating()
+rest3.customer_rating()
